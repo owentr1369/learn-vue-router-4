@@ -1,17 +1,17 @@
 <template>
   <div>
     <img alt="Vue logo" src="./assets/logo.png" />
-  </div>
-  <div>
-    <router-link to="/">Go to HomePage</router-link>
-    <router-link to="/about">Go to AboutPage</router-link>
-    <router-view />
+    <NavBar />
   </div>
 </template>
 
 <script>
+import NavBar from "./components/NavBar.vue";
 export default {
   name: "App",
+  components: {
+    NavBar,
+  },
 };
 </script>
 

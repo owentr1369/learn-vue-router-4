@@ -1,15 +1,30 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import HomePage from "./pages/HomePage.vue";
-import AboutPage from "./pages/AboutPage.vue";
+import OverViewPage from "./pages/OverView.vue";
+import TransactionsPage from "./pages/TransactionsPage.vue";
+import BudgetsPage from "./pages/BudgetsPage.vue";
+import ReportsPage from "./pages/ReportsPage.vue";
+import SettingsPage from "./pages/SettingsPage.vue";
 
 const routes = [
   {
     path: "/",
-    component: HomePage,
+    component: OverViewPage,
   },
   {
-    path: "/about",
-    component: AboutPage,
+    path: "/transactions",
+    component: TransactionsPage,
+  },
+  {
+    path: "/budgets",
+    component: BudgetsPage,
+  },
+  {
+    path: "/reports",
+    component: ReportsPage,
+  },
+  {
+    path: "/settings",
+    component: SettingsPage,
   },
 ];
 
