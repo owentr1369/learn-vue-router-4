@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import OverViewPage from "./pages/OverView.vue";
 import TransactionsPage from "./pages/TransactionsPage.vue";
 import BudgetsPage from "./pages/BudgetsPage.vue";
@@ -14,10 +14,12 @@ const routes = [
   },
   {
     path: "/transactions",
+    name: "transactions-route",
     component: TransactionsPage,
   },
   {
     path: "/transactions/:id",
+    name: "transaction-details-route",
     component: TransactionsDetail,
   },
   {
@@ -43,7 +45,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(process.env.BASE_URL),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
